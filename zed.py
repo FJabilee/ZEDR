@@ -39,7 +39,7 @@ def fill_form_and_verify(url, retries=3):
             # Launch the browser with proxy
             with sync_playwright() as p:
                 browser = p.chromium.launch(
-                    headless=False, 
+                    headless=True, 
                     proxy={
                         "server": proxy["server"],
                         "username": proxy["username"],
