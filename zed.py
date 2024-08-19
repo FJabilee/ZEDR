@@ -16,11 +16,13 @@ def fetch_random_data():
     response = requests.get('https://xiaofomation.com/api/?country=ph', headers={"Accept": "application/json"})
     return response.json()
 
+#  INSERT YOUR PROXY DETAILS HERE
 proxy = {
     "server": "http://PROXY_IP:PROXY_PORT",
     "username": "PROXY_USER",
     "password": "PROXY_PASS"
 }
+#  INSERT YOUR REFERRAL HERE
 REF_CODE = 'REF_CODE'
 def fill_form_and_verify(url, retries=3):
     while retries > 0:
